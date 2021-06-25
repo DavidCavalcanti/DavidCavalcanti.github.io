@@ -4,10 +4,12 @@ body{
 
 }
 
+
 h1{
 	font-size: 60px;
 	font-family:Dauphin;
 	border: 2px solid lightgrey;
+	text-align: center;
 	
 }
 
@@ -18,7 +20,7 @@ h2{
 
 h4{
 	background-color: bisque;
-	
+	text-align: center;
 }
 pre{
 	font-family: Open Sans;
