@@ -1,0 +1,27 @@
+body{
+
+	background-color: cornsilk;
+
+}
+
+h1{
+	font-size: 60px;
+	font-family:Dauphin;
+	border: 2px solid lightgrey;
+	
+}
+
+
+h2{
+	font-family:Dauphin;
+}
+
+h4{
+	background-color: bisque;
+	
+}
+pre{
+	font-family: Open Sans;
+	font-size: 20px;
+	border: 2px solid ligthgray;
+}
