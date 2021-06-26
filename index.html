@@ -36,13 +36,25 @@
 
             O trecho padrão original de Lorem Ipsum, usado desde o século XVI, está reproduzido abaixo para os interessados. Seções 1.10.32 e 1.10.33 de "de Finibus Bonorum et Malorum" de Cicero também foram reproduzidas abaixo em sua forma exata original, acompanhada das versões para o inglês da tradução feita por H. Rackham em 1914.
 
-        
-    
     </p>
-    <p> 
-        Imagens: 
-        <center><p><img src="imagem/coffe.jpg" alt="Notebook e café" ><br>
-        <img src="https://picsum.photos/400/200/?random" width="640" height="426" alt="Imagens aletórias"></p></center>
+    <p>
+        <h2>Clique em cada ítem da imagem abaixo e sabia mais sobre cada um.</h2>
+        <img src="imagem/home-office.jpg" alt="home-office" usemap="#home-office">
+        <map name="home-office">
+            <area shape="rect" coords="34,120,198,198" href="https://pt.wikipedia.org/wiki/Caderno" alt="Caderno" target="_blank" onclick="firstFunction">
+            <area shape="rect" coords="150, 150, 400, 290" href="https://pt.wikipedia.org/wiki/MacBook#:~:text=O%20MacBook%20%C3%A9%20uma%20linha,da%20Intel%20anunciada%20em%202005." alt="macbook" target="_blank" onclick="secondFunction()"> 
+        </map>
+        <script>
+             function firstFunction(){
+                alert("Você clicou em Caderno");
+            }
+        </script>
+        <script>
+            function secondFunction(){
+                alert("Você clicou em Macbook");
+            }
+        </script>
+    </p>
      
      <h2>Clique no emoji abaixo: </h2>
         <nav align="height">
