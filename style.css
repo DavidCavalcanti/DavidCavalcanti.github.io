@@ -46,6 +46,11 @@ li a {
 li a:hover{
 	background-color: #111111;
 }
+
+#id1{
+	display: inline-block;
+	text-decoration: none;
+}
 pre{
 	font-family: Open Sans;
 	font-size: 20px;
