@@ -14,9 +14,11 @@
     <hr>
 
     <nav align="center">
-        <a href="http://agenciatrato.com.br/blog/curiosidade-a-origem-do-lorem-ipsum/" target="_blank">Origem</a>|
-        <a href="https://www.4devs.com.br/gerador_de_texto_lorem_ipsum" target="_blank">Gerador de texto </a>|
-        <a href="https://oglobo.globo.com/economia/pesquisadores-encontram-codigo-secreto-em-textos-lorem-ipsum-13664039" target="_blank">Código secreto</a>
+        <ul>
+        <li><a href="http://agenciatrato.com.br/blog/curiosidade-a-origem-do-lorem-ipsum/" target="_blank">Origem</a></li>
+        <li><a href="https://www.4devs.com.br/gerador_de_texto_lorem_ipsum" target="_blank">Gerador de texto </a></li>
+        <li><a href="https://oglobo.globo.com/economia/pesquisadores-encontram-codigo-secreto-em-textos-lorem-ipsum-13664039" target="_blank">Código secreto</a></li>
+        </ul>
     </nav>
     <h2>O que é Lorem Ipsum?</h2>
     
@@ -31,17 +33,13 @@
     
     <h2>De onde ele vem?</h2>
     <p align = "justify"> 
-        
-         Ao contrário do que se acredita, <strong>Lorem Ipsum</strong> não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações da palavra na literatura clássica, descobriu a sua indubitável origem. Lorem Ipsum vem das seções 1.10.32 e 1.10.33 do "de Finibus Bonorum et Malorum" (Os Extremos do Bem e do Mal), de Cícero, escrito em 45 AC. Este livro é um tratado de teoria da ética muito popular na época da Renascença. A primeira linha de Lorem Ipsum, "Lorem Ipsum dolor sit amet..." vem de uma linha na seção 1.10.32.
-
-            O trecho padrão original de Lorem Ipsum, usado desde o século XVI, está reproduzido abaixo para os interessados. Seções 1.10.32 e 1.10.33 de "de Finibus Bonorum et Malorum" de Cicero também foram reproduzidas abaixo em sua forma exata original, acompanhada das versões para o inglês da tradução feita por H. Rackham em 1914.
-
+         Ao contrário do que se acredita, <strong>Lorem Ipsum</strong> não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College na Virginia, pesquisou uma das mais obscuras palavras em latim, consectetur, oriunda de uma passagem de Lorem Ipsum, e, procurando por entre citações da palavra na literatura clássica, descobriu a sua indubitável origem. Lorem Ipsum vem das seções 1.10.32 e 1.10.33 do "de Finibus Bonorum et Malorum" (Os Extremos do Bem e do Mal), de Cícero, escrito em 45 AC. Este livro é um tratado de teoria da ética muito popular na época da Renascença. A primeira linha de Lorem Ipsum, "Lorem Ipsum dolor sit amet..." vem de uma linha na seção 1.10.32. O trecho padrão original de Lorem Ipsum, usado desde o século XVI, está reproduzido abaixo para os interessados. Seções 1.10.32 e 1.10.33 de "de Finibus Bonorum et Malorum" de Cicero também foram reproduzidas abaixo em sua forma exata original, acompanhada das versões para o inglês da tradução feita por H. Rackham em 1914.
     </p>
     <p>
         <h2>Clique em cada ítem da imagem abaixo e sabia mais sobre cada um.</h2>
         <img src="imagem/home-office.jpg" alt="home-office" usemap="#home-office">
         <map name="home-office">
-            <area shape="rect" coords="34,120,198,198" href="https://pt.wikipedia.org/wiki/Caderno" alt="Caderno" target="_blank" onclick="firstFunction">
+            <area shape="rect" coords="34,120,198,198" href="https://pt.wikipedia.org/wiki/Caderno" alt="Caderno" target="_blank" onclick="firstFunction()">
             <area shape="rect" coords="150, 150, 400, 290" href="https://pt.wikipedia.org/wiki/MacBook#:~:text=O%20MacBook%20%C3%A9%20uma%20linha,da%20Intel%20anunciada%20em%202005." alt="macbook" target="_blank" onclick="secondFunction()"> 
         </map>
         <script>
@@ -55,13 +53,50 @@
             }
         </script>
     </p>
-     
      <h2>Clique no emoji abaixo: </h2>
-        <nav align="height">
+    <nav align="height">
          <a href="http://agenciatrato.com.br/blog/curiosidade-a-origem-do-lorem-ipsum/" title="Origem" target="_blank"> <img src="imagem/emoji-png-69.png" alt="Emoji" width="42px" height="42px"></a>
          <a href="https://www.4devs.com.br/gerador_de_texto_lorem_ipsum" title="Gerador de texto" target="_blank"> <img src="imagem/emoji-png-57.png" alt="Emoji cabeça explodindo" width="42px" height="42px"></a>
-         <a href="https://oglobo.globo.com/economia/pesquisadores-encontram-codigo-secreto-em-textos-lorem-ipsum-13664039" title="Código secreto" target="_blank"> <img src="imagem/emoji-png-70.png" alt="Emoji encucado" width="42px" height="42px">        
+         <a href="https://oglobo.globo.com/economia/pesquisadores-encontram-codigo-secreto-em-textos-lorem-ipsum-13664039" title="Código secreto" target="_blank"> <img src="imagem/emoji-png-70.png" alt="Emoji encucado" width="42px" height="42px"> </a>       
     </nav>
-    <button onclick="document.location= 'testedeplataforma1@gmail.com'"> Email para contato</button>
+
+    <h2>Exemplo do uso de tabela com as tags: <em>tr, th</em> e <em>td</em></h2>
+    <table  align="center" width="50%">
+     <caption>Lorem Ipsum</caption>   
+    <tr><!-- Define cada linha-->
+        <th>Firstname</th><!--Define o cabeçalho-->
+        <th>Lastname</th>
+        <th>Age</th>        
+    </tr>
+    <tr>
+        <td>Jill</td><!--Define o conteúdo de cada célula-->
+        <td>Smith</td>
+        <td>50</td>
+    </tr>
+    <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>80</td>
+    </tr>
+</table>
+
+<h2>Célula ocupando mais de uma coluna:</h2>
+<table id="tabela" align="center" >
+    <tr>
+        <th>Name</th>
+        <th colspan="2">Telefone</th>
+    </tr>
+    <tr>
+        <td>Bill Gates</td>
+        <td>99999-9999</td>
+        <td>99999-9999</td>
+    </tr>
+</table>
+    
 </body>
 </html> 
