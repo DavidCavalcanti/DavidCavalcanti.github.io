@@ -1,0 +1,23 @@
+Tag <div></div>
+
+*Tag usada para definir uma divisão ou seção do documento
+*Esta tag geralmente é usada como contêiner para outros elementos.
+*Muitas vezes o principal objetivo de uma tag div é estilizar com css ou executar tarefas com JavaScript
+
+a div sempre começa em uma nova linha e ocupa toda a largura disponível.
+link:https://www.youtube.com/watch?v=FyOsoRALEG0
+OBS: Sempre usar os elementos semânticos antes da div (section, nav, article...). Caso nenhum desses seja específico para o que precisa fazer, usa a div
+
+Tag <span></span>
+
+*Tag  usada para agrupar para texto ou tags em um documentos.
+*Não fornee nenhuma alteração visual por padrão.
+*Normalmente o objetivo do seu uso é aplicar alguma estilo CSS (Pra texto).
+
+link:https://www.youtube.com/watch?v=8P4T8gQI-Ss
+
+Tag <input>
+
+* Tag usada para definir um campo de entrada
+* Um campo de entrada serve para o usuário inserir dados ou interagir com a página.
+*A tag pode variar de várias maneiras dependendo do atributo 'type'.
