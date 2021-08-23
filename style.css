@@ -1,18 +1,4 @@
-#circulo1{
-	fill:green;
-	stroke:brown; 
-	stroke-width:5px;
-}
-
-#ellipse1{
-	fill: blueviolet;
-	stroke: blanchedalmond;
-	stroke-width: 10px;
-}
-
-#retangulo1{
-
-	fill: coral;
-	stroke: chocolate;
-	stroke-width: 10px ;
+#texto{
+	
+	font-family: 'Times New Roman', Times, serif;
 }
