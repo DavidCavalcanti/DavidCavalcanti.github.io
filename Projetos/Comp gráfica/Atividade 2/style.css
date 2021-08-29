@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;   
+    background-color: bisque  ; 
+}
+
+.titulo{
+    text-align: center;
+    
+}
+
+h6{
+    margin-top: 50px;
+}
