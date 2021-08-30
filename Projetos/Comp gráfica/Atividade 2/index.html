@@ -16,12 +16,6 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 
-    <script>
-        function rebeceVlores(){
-            
-        }
-    </script>
-
 </head>
 
 <body>
@@ -32,7 +26,7 @@
                     <div id="bg" class="col-md-6 col-sm-12 " aling="center">
                         <h2 class="titulo"> Gere sua reta </h2>
 
-                        <form  method="get" action="retas.php" >
+                        
                              <h6 >Ponto 1</h6>
 
                             <label for="idponto1">  X1 : </label> <br> <input type="number " name="ponto1"
@@ -48,22 +42,32 @@
                             <label for="idponto4"> Y2: </label><br> <input type="number" name="ponto4"
                                 id="idponto4">
 
-                                <input type="submit" value="Enviar" onclick="">
+                                <button type="submit" class="botao" onclick="ReceberValoresReta()">Plotar</button>
 
-                        </form>
+                                <svg height="210" width="500">
+                                    <line x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(255,0,0);stroke-width:2" id="reta"></line> 
+                                </svg>
+
+                        
                     </div>
                     <div id="bg" class="col-md-6 col-sm-12">
                         <h2 class="titulo" >Gere seu círculo</h2>
 
-                        <form method="get" action="retas.php">
+                        
                             <h4 style="margin-top: 50px;">Insira o raio e o centro</h4>
 
                             <label for="idraio"> Raio:</label> <br> <input type="number" name="raio" id="idraio"><br>
-                            <label for="idcentro"> Centro:</label> <br> <input type="number" name="centro"
-                                id="idcentro">
+                            <label for="idcentro"> Centro Coordenada X:</label> <br> <input type="number" name="centro"
+                                id="idcentroX">
+                            <label for="idcentroY"> Centro Coordenada Y:</label> <br> <input type="number" name="centro"
+                            id="idcentroY">
 
-                            <input type="submit" value="Enviar" >
-                        </form>
+                                <button type="submit" class="botao" onclick="ReceberValoresCirculo()">Plotar</button>
+
+                                <svg height="100" width="100">
+                                    <circle cx="0" cy="0" r="0" stroke="black" stroke-width="3" fill="red" id="circulo"/>
+                                  </svg>
+                        
                     </div>
 
                 </div>
@@ -72,10 +76,10 @@
         </div>
         </div>                                        
  
-        
+        <script src="script.js"></script>
     </main>
 
-   
+
 </body>
 
 </html>
