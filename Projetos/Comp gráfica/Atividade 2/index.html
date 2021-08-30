@@ -15,6 +15,13 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        function rebeceVlores(){
+            
+        }
+    </script>
+
 </head>
 
 <body>
@@ -25,15 +32,15 @@
                     <div id="bg" class="col-md-6 col-sm-12 " aling="center">
                         <h2 class="titulo"> Gere sua reta </h2>
 
-                        <form method="get" action="index.php">
-                            <h6 >Ponto 1</h6>
+                        <form  method="get" action="retas.php" >
+                             <h6 >Ponto 1</h6>
 
                             <label for="idponto1">  X1 : </label> <br> <input type="number " name="ponto1"
                                 id="idponto1"><br>
                             <label for="idponto2"> Y1: </label><br> <input type="number" name="ponto2"
                                 id="idponto2">
 
-                            <input type="submit" value="Enviar">
+                            
 
                             <h6>Ponto 2</h6>
                             <label for="idponto3"> X2 : </label> <br> <input type="number " name="ponto3"
@@ -41,21 +48,21 @@
                             <label for="idponto4"> Y2: </label><br> <input type="number" name="ponto4"
                                 id="idponto4">
 
-                            <input type="submit" value="Enviar">
+                                <input type="submit" value="Enviar" onclick="">
 
                         </form>
                     </div>
                     <div id="bg" class="col-md-6 col-sm-12">
-                        <h2 class="titulo">Gere seu círculo</h2>
+                        <h2 class="titulo" >Gere seu círculo</h2>
 
-                        <form method="get" action="index.php">
+                        <form method="get" action="retas.php">
                             <h4 style="margin-top: 50px;">Insira o raio e o centro</h4>
 
                             <label for="idraio"> Raio:</label> <br> <input type="number" name="raio" id="idraio"><br>
                             <label for="idcentro"> Centro:</label> <br> <input type="number" name="centro"
                                 id="idcentro">
 
-                            <input type="submit" value="Enviar">
+                            <input type="submit" value="Enviar" >
                         </form>
                     </div>
 
@@ -63,8 +70,12 @@
             </div>
 
         </div>
-        </div>
+        </div>                                        
+ 
+        
     </main>
+
+   
 </body>
 
 </html>
