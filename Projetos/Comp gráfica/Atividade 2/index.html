@@ -26,56 +26,54 @@
                     <div id="bg" class="col-md-6 col-sm-12 " aling="center">
                         <h2 class="titulo"> Gere sua reta </h2>
 
-                        
-                             <h6 >Ponto 1</h6>
 
-                            <label for="idponto1">  X1 : </label> <br> <input type="number " name="ponto1"
-                                id="idponto1"><br>
-                            <label for="idponto2"> Y1: </label><br> <input type="number" name="ponto2"
-                                id="idponto2">
+                        <h6>Ponto 1</h6>
+
+                        <label for="idponto1"> X1 : </label> <br> <input type="number " name="ponto1" id="idponto1"><br>
+                        <label for="idponto2"> Y1: </label><br> <input type="number" name="ponto2" id="idponto2">
+
+
+
+                        <h6>Ponto 2</h6>
+                        <label for="idponto3"> X2 : </label> <br> <input type="number " name="ponto3" id="idponto3"><br>
+                        <label for="idponto4"> Y2: </label><br> <input type="number" name="ponto4" id="idponto4">
+
+                        <button type="submit" class="botao" onclick="ReceberValoresReta()">Plotar</button>
+
+                        <svg height="1000" width="1000" class="prompt" >
 
                             
+                            <!-- <line x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(255,0,0);stroke-width:2" id="reta"></line>  -->
+                        </svg>
 
-                            <h6>Ponto 2</h6>
-                            <label for="idponto3"> X2 : </label> <br> <input type="number " name="ponto3"
-                                id="idponto3"><br>
-                            <label for="idponto4"> Y2: </label><br> <input type="number" name="ponto4"
-                                id="idponto4">
 
-                                <button type="submit" class="botao" onclick="ReceberValoresReta()">Plotar</button>
-
-                                <svg height="210" width="500">
-                                    <line x1="0" y1="0" x2="0" y2="0" style="stroke:rgb(255,0,0);stroke-width:2" id="reta"></line> 
-                                </svg>
-
-                        
                     </div>
                     <div id="bg" class="col-md-6 col-sm-12">
-                        <h2 class="titulo" >Gere seu círculo</h2>
+                        <h2 class="titulo">Gere seu círculo</h2>
 
-                        
-                            <h4 style="margin-top: 50px;">Insira o raio e o centro</h4>
 
-                            <label for="idraio"> Raio:</label> <br> <input type="number" name="raio" id="idraio"><br>
-                            <label for="idcentro"> Centro Coordenada X:</label> <br> <input type="number" name="centro"
-                                id="idcentroX">
-                            <label for="idcentroY"> Centro Coordenada Y:</label> <br> <input type="number" name="centro"
+                        <h4 style="margin-top: 50px;">Insira o raio e o centro</h4>
+
+                        <label for="idraio"> Raio:</label> <br> <input type="number" name="raio" id="idraio"><br>
+                        <label for="idcentro"> Centro Coordenada X:</label> <br> <input type="number" name="centro"
+                            id="idcentroX">
+                        <label for="idcentroY"> Centro Coordenada Y:</label> <br> <input type="number" name="centro"
                             id="idcentroY">
 
-                                <button type="submit" class="botao" onclick="ReceberValoresCirculo()">Plotar</button>
+                        <button type="submit" class="botao" onclick="ReceberValoresCirculo()">Plotar</button>
 
-                                <svg height="100" width="100">
-                                    <circle cx="0" cy="0" r="0" stroke="black" stroke-width="3" fill="red" id="circulo"/>
-                                  </svg>
-                        
+                        <svg height="100" width="100">
+                            <circle cx="0" cy="0" r="0" stroke="black" stroke-width="3" fill="red" id="circulo" />
+                        </svg>
+
                     </div>
 
                 </div>
             </div>
 
         </div>
-        </div>                                        
- 
+        </div>
+
         <script src="script.js"></script>
     </main>
 
