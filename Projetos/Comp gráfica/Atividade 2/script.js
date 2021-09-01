@@ -10,14 +10,6 @@ let point7;
 let pixel = "";
 var tela = document.querySelector(".prompt");
 
-function PlotarReta() {
-    let camp1 = document.querySelector("#reta");
-    camp1.setAttribute("x1", point1);
-    camp1.setAttribute("y1", point2);
-    camp1.setAttribute("x2", point3);
-    camp1.setAttribute("y2", point4);
-}
-
 function ReceberValoresCirculo() {
     point5 = document.querySelector("#idcentroX").value;
     point6 = document.querySelector("#idcentroY").value;
@@ -33,36 +25,57 @@ function PlotarCirculo() {
 }
 
 function drawPixel(x, y) {
-    pixel += `<rect x="${x}" y= "${y}" width="5" height="5" style="fill:red; stroke:black; stroke-width:3px"/>`;
+   pixel += `<rect x="${x}" y= "${y}" width="20" height="20" style="fill:red; stroke:black; stroke-width:3px"/>`;
 }
 
-
-//retorna um numero positivo
-
-function abs(number) {
-    if (number < 0)
-        return number * (-1)
-    return number
-}
-//arredonda o número
 
 function round(number) {
-    return parseInt(number + 0.5);
+    return parseInt(number);
 }
 
 
-function DDA(x1, y1, x2, y2){
-    let step;
-    let X;                      //COMECEI A FAZER IGUAL A DE JORGE
+function DDA(x1, y1, x2, y2) {
+    let step, i = 0;
+    let X, Y;
+    let Xinc, Yinc;
+    step = Math.abs(x2 - x1);
+
+    if (Math.abs(y2 - y1) > step)
+        step = Math.abs(y2 - y1);
+
+    Xinc = (x2 - x1) / step;
+    Yinc = (y2 - y1) / step;
+    X = x1;
+    Y = y1;       
+
+    while (i <= step) {
+        console.log(X);
+        console.log(Y);
+        drawPixel(round(X), round(Y));
+        X += Xinc;
+        Y += Yinc;
+        i++;
+    }
     tela.innerHTML = pixel;
+
 }
 
 
 
 function ReceberValoresReta() {
-    point1 = document.querySelector("#idponto1").value;
-    point2 = document.querySelector("#idponto2").value;
-    point3 = document.querySelector("#idponto3").value;
-    point4 = document.querySelector("#idponto4").value;
+    point1 = parseInt(document.querySelector("#idponto1").value);
+    point2 = parseInt(document.querySelector("#idponto2").value);
+    point3 = parseInt(document.querySelector("#idponto3").value);
+    point4 = parseInt(document.querySelector("#idponto4").value);
+    PlotarReta();
     DDA(point1, point2, point3, point4);
+
+}
+
+function PlotarReta(){
+    let camp1 = document.querySelector("#reta");
+    camp1.setAttribute("x1", point1);
+    camp1.setAttribute("y1", point2);
+    camp1.setAttribute("x2", point3);
+    camp1.setAttribute("y2", point4);
 }
