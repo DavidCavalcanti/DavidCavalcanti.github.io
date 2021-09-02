@@ -103,13 +103,13 @@ function CirculoSimples(xc, yc, r) {
     y = r;
     yr = r;
 
-    plotPoint(xc, yc, x, y);
+    plotPoint(xc*5, yc*5, x*5, y*5);
 
     while (x < yr) {
         x += 1;
         yr = Math.sqrt(r * r - x * x);
         y = parseInt(round(yr));
-        plotPoint(xc, yc, x, y);
+        plotPoint(xc*5, yc*5, x*5, y*5);
     }
 
     tela.innerHTML = pixel;
@@ -122,7 +122,7 @@ function CirculoPontoMedio(xc, yc, r) {
     y = r;
     p = 1 - r;
 
-    plotPoint(xc, yc, x, y);
+    plotPoint(xc*5, yc*5, x*5, y*5);
 
     while (x < y) {
         x += 1;
@@ -132,12 +132,13 @@ function CirculoPontoMedio(xc, yc, r) {
             y -= 1;
             p = p + 2 * (x - y) + 1;
         }
-        plotPoint(xc, yc, x, y);
+        plotPoint(xc*5, yc*5, x*5, y*5);
     }
     tela.innerHTML = pixel;
     pixel = "";
 }
 
+/*
 function PlotarReta() {
     let camp1 = document.querySelector("#reta");
     camp1.setAttribute("x1", point1);
@@ -145,6 +146,7 @@ function PlotarReta() {
     camp1.setAttribute("x2", point3);
     camp1.setAttribute("y2", point4);
 }
+*/
 
 function ReceberValoresRetaDDA() {
     point1 = parseInt(document.querySelector("#idponto1").value);
