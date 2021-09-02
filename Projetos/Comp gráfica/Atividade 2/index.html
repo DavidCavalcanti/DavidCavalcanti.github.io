@@ -26,7 +26,7 @@
                     <h2></h2>
                     <div id="bg" class="col-md-6 col-sm-12" aling="center">
                         
-                        <h4 class="titulo"> Gere sua reta </h4>
+                        <h2 class="titulo"> Gere sua reta </h2>
 
 
                         <h6>Ponto 1</h6>
@@ -39,10 +39,10 @@
                         <h6 style="margin-top: 65px;">Ponto 2</h6>
 
                         <label for="idponto3"> X2 : </label> <br> <input type="number" name="ponto3" id="idponto3"><br>
-                        <label for="idponto4"> Y2:  </label>   <br>    <input type="number" name="ponto4" id="idponto4"><br>
+                        <label for="idponto4"> Y2:  </label>   <br>    <input type="number" name="ponto4" id="idponto4" style="margin-bottom: 65px;"><br>
                                                 
-                        <button type="submit" class="botao" onclick="RecebeValoresRetaBresenham()">Plotar</button>    
-                        <button type="submit" class="botao" onclick="ReceberValoresRetaDDA()">Plotar</button>
+                        <button class= " btn" type="submit" class="botao" onclick="RecebeValoresRetaBresenham()">Plotar Com Bresenham</button>    <br>
+                        <button class= " btn" type="submit" class="botao" onclick="ReceberValoresRetaDDA()">Plotar Com DDA</button>
 
                     
 
@@ -56,13 +56,13 @@
                         <h2 class="titulo">Gere seu círculo</h2>
 
 
-                        <h4 style="margin-top: 50px;">Insira o raio e o centro</h4>
+                        <h6>Insira o raio e o centro</h6>
 
                         <label for="idraio"> Raio:</label> <br> <input type="number" name="raio" id="idraio"><br>
                         <label for="idcentro"> Centro Coordenada X:</label> <br> <input type="number" name="centro"
                             id="idcentroX">
                         <label for="idcentroY"> Centro Coordenada Y:</label> <br> <input type="number" name="centro"
-                            id="idcentroY">
+                            id="idcentroY" style="margin-bottom: 326px;">
 
                         <button class= " btn" type="submit" class="botao" onclick="ReceberValoresCirculoSimples()">Circulo Simples</button>
                         <button class= " btn" type="submit" class="botao" onclick="ReceberValoresCirculoPontoMedio()">Ponto Médio</button>
