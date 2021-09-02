@@ -25,7 +25,7 @@ function PlotarCirculo() {
 }
 
 function drawPixel(x, y) {
-   pixel += `<rect x="${x}" y= "${y}" width="20" height="20" style="fill:red; stroke:black; stroke-width:3px"/>`;
+    pixel += `<rect x="${x}" y= "${y}" width="20" height="20" style="fill:red; stroke:black; stroke-width:3px"/>`;
 }
 
 
@@ -46,7 +46,7 @@ function DDA(x1, y1, x2, y2) {
     Xinc = (x2 - x1) / step;
     Yinc = (y2 - y1) / step;
     X = x1;
-    Y = y1;       
+    Y = y1;
 
     while (i <= step) {
         console.log(X);
@@ -60,19 +60,48 @@ function DDA(x1, y1, x2, y2) {
 
 }
 
+function Bresenham(x1, y1, x2, y2) {
+
+    let dx, dy;
+    let aux1, aux2;
+    let X, Y, p;
+
+    dx = x2 - x1;
+    dy = y2 - y1;
+
+    aux1 = 2 * dy;
+    aux2 = aux1 - 2 * dx;
+
+    X = x1;
+    Y = y1;
+
+    p = aux1 - dx;
+
+    if (p < 0) {
+        while (X < x2 && Y < y2) {
+            drawPixel(X, Y);
+            X += 1;
+            Y += 1;
+            p += aux2;
+        }
+    }
+    tela.innerHTML = pixel;
 
 
-function ReceberValoresReta() {
+}
+
+
+
+function ReceberValoresRetaDDA() {
     point1 = parseInt(document.querySelector("#idponto1").value);
     point2 = parseInt(document.querySelector("#idponto2").value);
     point3 = parseInt(document.querySelector("#idponto3").value);
     point4 = parseInt(document.querySelector("#idponto4").value);
     PlotarReta();
     DDA(point1, point2, point3, point4);
-
 }
 
-function PlotarReta(){
+function PlotarReta() {
     let camp1 = document.querySelector("#reta");
     camp1.setAttribute("x1", point1);
     camp1.setAttribute("y1", point2);
