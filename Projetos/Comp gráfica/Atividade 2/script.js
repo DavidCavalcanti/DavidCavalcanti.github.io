@@ -9,6 +9,7 @@ let point7;
 
 let pixel = "";
 var tela = document.querySelector(".prompt");
+var tela2 = document.querySelector(".prompt2");
 
 function plotPoint(xc, yc, x, y) {
     drawPixel(xc + x, yc + y);
@@ -119,7 +120,7 @@ function CirculoSimples(xc, yc, r) {
         plotPoint(xc*5, yc*5, x*5, y*5);
     }
 
-    tela.innerHTML = pixel;
+    tela2.innerHTML = pixel;
     pixel = "";
 }
 
@@ -141,7 +142,7 @@ function CirculoPontoMedio(xc, yc, r) {
         }
         plotPoint(xc*5, yc*5, x*5, y*5);
     }
-    tela.innerHTML = pixel;
+    tela2.innerHTML = pixel;
     pixel = "";
 }
 
