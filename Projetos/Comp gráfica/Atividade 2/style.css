@@ -6,11 +6,7 @@
     box-sizing: border-box;           
 }
 
-body{
-    background-image: url('imagem/background.jpg');
-    
-    
-}
+
 
 .titulo{
     margin: 50px 0 10px 0;
@@ -33,8 +29,12 @@ h6{
 
        
 }
+input{
+    display: block;
+    margin: 0 auto;
+}
 
-#bg{
+.bg{
 
     border-style:groove;
     border-width: 8px;
@@ -66,4 +66,3 @@ h6{
      transform: translate(0px, -5px);
      transition: 0.5s;
  }
- 
