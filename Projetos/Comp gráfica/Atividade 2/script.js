@@ -30,7 +30,7 @@ function PlotarCirculo() {
 }
 
 function drawPixel(x, y) {
-    pixel += `<rect x="${x}" y= "${y}" width="20" height="20" style="fill:red; stroke:black; stroke-width:3px"/>`;
+    pixel += `<rect x="${x}" y= "${y}" width="10" height="10" style="fill:red; stroke:black; stroke-width:3px"/>`;
 }
 
 
@@ -58,7 +58,7 @@ function DDA(x1, y1, x2, y2) {
         console.log(Y);
         drawPixel(round(X), round(Y));
         X += Xinc;
-        Y += Yinc;
+        Y -= Yinc;
         i++;
     }
     tela.innerHTML = pixel;
