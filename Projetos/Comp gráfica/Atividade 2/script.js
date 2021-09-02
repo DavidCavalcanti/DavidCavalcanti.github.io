@@ -56,7 +56,7 @@ function DDA(x1, y1, x2, y2) {
     while (i <= step) {
         console.log(X);
         console.log(Y);
-        drawPixel(round(X), round(Y));
+        drawPixel(round(X*20), round(Y*20));
         X += Xinc;
         Y -= Yinc;
         i++;
@@ -151,7 +151,6 @@ function ReceberValoresRetaDDA() {
     point2 = parseInt(document.querySelector("#idponto2").value);
     point3 = parseInt(document.querySelector("#idponto3").value);
     point4 = parseInt(document.querySelector("#idponto4").value);
-    PlotarReta();
     DDA(point1, point2, point3, point4);
 }
 
