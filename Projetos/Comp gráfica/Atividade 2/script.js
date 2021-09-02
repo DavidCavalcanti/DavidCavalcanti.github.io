@@ -86,17 +86,17 @@ function Bresenham(x1, y1, x2, y2) {
         y = y1;
         xf = x2;
     }
-    drawPixel(x, y);
+    drawPixel(x*20, y*20);
 
     while (x < xf) {
         x++;
         if (p < 0) {
-            p += p2;
+            p -= p2;
         } else {
-            y++;
-            p += xy2;
+            y--;
+            p -= xy2;
         }
-        drawPixel(x, y);
+        drawPixel(x*20, y*20);
     }
     tela.innerHTML = pixel;
     pixel = "";
