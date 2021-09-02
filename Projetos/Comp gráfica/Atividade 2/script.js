@@ -68,28 +68,35 @@ function DDA(x1, y1, x2, y2) {
 
 function Bresenham(x1, y1, x2, y2) {
 
-    let dx, dy;
-    let aux1, aux2;
-    let X, Y, p;
+    let dx, dy, p, p2, xy2, x, y, xf;
 
     dx = x2 - x1;
     dy = y2 - y1;
 
-    aux1 = 2 * dy;
-    aux2 = aux1 - 2 * dx;
+    p = 2 * dy - dx;
+    p2 = 2 * dy;
+    xy2 = 2 * (dy - dx);
 
-    X = x1;
-    Y = y1;
+    if (x1 > x2) {
+        x = x2;
+        y = y2;
+        xf = x1;
+    } else {
+        x = x1;
+        y = y1;
+        xf = x2;
+    }
+    drawPixel(x*20, y*20);
 
-    p = aux1 - dx;
-
-    if (p < 0) {
-        while (X < x2 && Y < y2) {
-            drawPixel(X, Y);
-            X += 1;
-            Y += 1;
-            p += aux2;
+    while (x < xf) {
+        x++;
+        if (p < 0) {
+            p -= p2;
+        } else {
+            y--;
+            p -= xy2;
         }
+        drawPixel(x*20, y*20);
     }
     tela.innerHTML = pixel;
     pixel = "";
