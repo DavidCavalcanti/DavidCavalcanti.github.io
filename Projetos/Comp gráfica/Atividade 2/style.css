@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+
+
 *{
     box-sizing: border-box;           
 }
@@ -9,7 +13,15 @@ body{
 }
 
 .titulo{
+    margin: 50px 0 10px 0;
     text-align: center;            
+}
+hr{
+    text-align: center;
+    width: 40%;
+    border-bottom:  solid #ffe600;  
+    margin-left: 30%;  
+    margin-top: 0.5%;
 }
 
 h6{
@@ -31,6 +43,7 @@ h6{
 }
 
 .btn{
+    
     font-size: 20px;
     text-decoration: none;
     display: block;
