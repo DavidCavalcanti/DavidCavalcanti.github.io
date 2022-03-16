@@ -51,6 +51,11 @@ body{
     color: var(--primary-color-white);
 }
 
+h2{
+    font-size: 100px;
+     color: #ffffff;
+}
+
 .conteudo-temporizador{
     background-color: var(--primary-color-temporizador);    
     padding: 40px;    
@@ -112,4 +117,20 @@ body{
 .c5{
     background-color: green
     ;
+}
+
+hr{
+    color: var(--primary-color-white);
+}
+
+.paragrafo, h4{
+    text-align: justify;
+    font-size: 30px;
+    color: var(--primary-color-white);
+    font-weight: 400;
+}
+
+.imagem{
+    
+    text-align: center;
 }
