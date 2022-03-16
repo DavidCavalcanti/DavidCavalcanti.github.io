@@ -2,7 +2,12 @@
 const form = document.querySelector('form');
 
 //Parando o envio do formulário
-form.addEventListener('submit', function(e){ // '(e)' é o evento que a qual a função captura
+form.addEventListener('submit', function (e) { // '(e)' é o evento que a qual a função captura
     e.preventDefault();
     console.log('Evento parado');
 })
+
+//Função que insere um html dentro da div.resultado 
+function setResutado(mensagem) {
+    const resultado = document.querySelector
+}
