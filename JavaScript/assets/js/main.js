@@ -13,6 +13,16 @@ form.addEventListener("submit", function (event) {
   // Pegando os valores dos inputs
   const peso = Number(inputPeso.value);
   const altura = Number(inputAltura.value);
+
+  if(!peso){ // se altura for falsy
+      setResutado('Peso inválido', false);
+      return;
+  }
+
+  if(!altura){
+      setResutado('Altura inválida', false)
+      return;
+  }
 });
 
 // Função que cria parágrafo
@@ -22,7 +32,7 @@ function criaP(className) {
 }
 
 //Função que insere um html dentro da div.resultado
-function setResutado(mensagem) {
+function setResutado(mensagem, isValide) {
   const resultado = document.querySelector("#resultado");
   resultado.innerHTML = ""; // Zera resultado
   const p = criaP();
