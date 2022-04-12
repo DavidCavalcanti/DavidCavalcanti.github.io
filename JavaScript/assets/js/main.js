@@ -11,5 +11,5 @@ form.addEventListener("submit", function (event) {
 //Função que insere um html dentro da div.resultado
 function setResutado(mensagem) {
   const resultado = document.querySelector('#resultado');
-  resultado.innerHTML = mensagem;
+  resultado.innerHTML = '';
 }
