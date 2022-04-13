@@ -14,16 +14,26 @@ form.addEventListener("submit", function (event) {
   const peso = Number(inputPeso.value);
   const altura = Number(inputAltura.value);
 
-  if(!peso){ // se altura for falsy
-      setResutado('Peso inválido', false);
-      return;
+  if (!peso) {
+    // se altura for falsy
+    setResutado("Peso inválido", false);
+    return;
   }
 
-  if(!altura){
-      setResutado('Altura inválida', false)
-      return;
+  if (!altura) {
+    setResutado("Altura inválida", false);
+    return;
   }
+
+  const imc = getImc(peso, altura);
+
+  console.log(imc);
 });
+
+function getImc(peso, altura) {
+  const imc = peso / altura ** 2;
+  return imc.toFixed(2); // retorna com precissão de duas casas decimais
+}
 
 // Função que cria parágrafo
 function criaP(className) {
@@ -32,11 +42,11 @@ function criaP(className) {
 }
 
 //Função que insere um html dentro da div.resultado
-function setResutado(mensagem, isValide) {
+function setResutado(mensagem, isValid) {
   const resultado = document.querySelector("#resultado");
   resultado.innerHTML = ""; // Zera resultado
   const p = criaP();
-  p.classList.add("paragrafo-resultado"); // Adiciona uma classe ao parágrafo p
-  p.innerHTML = "Qualquer coisa"; // coloca um html dentro do parágrafo
+  p.innerHTML = mensagem; // coloca um html dentro do parágrafo
   resultado.appendChild(p); // insere p ao resultado (insere na div)
+  // p.classList.add("paragrafo-resultado"); // Adiciona uma classe ao parágrafo p
 }
