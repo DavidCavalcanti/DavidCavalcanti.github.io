@@ -28,7 +28,9 @@ form.addEventListener("submit", function (event) {
   const imc = getImc(peso, altura);
   const nivelImc = getNivelImc(imc);
 
-  console.log(imc, nivelImc);
+  const mensagem = `Seu imc é ${imc} (${nivelImc}).`;
+  
+  setResutado(mensagem, true);
 });
 
 function getImc(peso, altura) {
@@ -65,7 +67,9 @@ function setResutado(mensagem, isValid) {
   const resultado = document.querySelector("#resultado");
   resultado.innerHTML = ""; // Zera resultado
   const p = criaP();
+  if (isValid) {p.classList.add("paragrafo-resultado");} // Adiciona uma classe ao parágrafo p
+  else {p.classList.add("bad");} // Adiciona uma classe ao parágrafo p}
   p.innerHTML = mensagem; // coloca um html dentro do parágrafo
   resultado.appendChild(p); // insere p ao resultado (insere na div)
-  // p.classList.add("paragrafo-resultado"); // Adiciona uma classe ao parágrafo p
+  // 
 }
