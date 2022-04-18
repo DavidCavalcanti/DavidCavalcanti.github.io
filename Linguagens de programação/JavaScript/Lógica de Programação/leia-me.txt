@@ -1,0 +1,9 @@
+O que é o NodeList?
+
+Objetos NodeList são coleções de nodos semelhantes aos Objetos 
+retornados pelos métodos Node.childNodes e documents.querySelectorAll(). 
+
+Ele comporta-se similar a uma array. Você pode usar um for of para percorrê-lo
+
+referência:
+https://developer.mozilla.org/pt-BR/docs/Web/API/NodeList
