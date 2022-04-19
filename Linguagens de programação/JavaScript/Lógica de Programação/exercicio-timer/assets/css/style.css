@@ -16,6 +16,7 @@ body{
     padding: 0;    
     background: var(--primary-color);
     font-family: 'open Sans', sans-serif ;
+    text-align: center;
 }
 
 .container{
@@ -62,4 +63,8 @@ form button:hover{
 
 form button:active{
     background: rgb(7, 222, 238);
+}
+
+.relogio{
+    font-size: 3rem;
 }
