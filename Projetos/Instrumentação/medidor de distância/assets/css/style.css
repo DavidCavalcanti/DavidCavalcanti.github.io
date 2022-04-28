@@ -51,9 +51,9 @@ body{
     color: var(--primary-color-white);
 }
 
-h2{
-    font-size: 100px;
-     color: #ffffff;
+.relogio{
+    color: white;
+    font-size: 5rem;
 }
 
 .conteudo-temporizador{
