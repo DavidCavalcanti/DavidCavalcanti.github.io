@@ -32,5 +32,11 @@ function relogio() {
       clearInterval();
       relogio.classList.add("pausado");
     }
+
+    if(elemento.classList.contains("iniciar")){
+        relogio.classList.remove("pausado");
+        clearInterval(timer);
+        IniciarRelogio();
+    }
   });
 }
