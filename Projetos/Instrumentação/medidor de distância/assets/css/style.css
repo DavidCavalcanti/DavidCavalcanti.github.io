@@ -134,3 +134,7 @@ hr{
     text-align: center;
     margin: 0 auto;
 }
+
+.pausado {
+   color: red;
+}

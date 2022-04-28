@@ -28,6 +28,9 @@ function relogio() {
       seconds = 0;
     }
 
-  
+    if (elemento.classList.contains("pausar")) {
+      clearInterval();
+      relogio.classList.add("pausado");
+    }
   });
 }
