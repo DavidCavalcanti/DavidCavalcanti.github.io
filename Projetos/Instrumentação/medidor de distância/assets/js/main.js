@@ -7,6 +7,15 @@ function relogio() {
     });
   }
   const relogio = document.querySelector(".relogio");
+  let seconds = 0; // Variável que mantem os segundos
+  let timer;
+
+  function IniciarRelogio() {
+    timer = setInterval(() => {
+      seconds++;
+      relogio.innerHTML = getFromSeconds(seconds); // getFromSeconds recebe os segundos e formata o horário
+    }, 1000);
+  }
 
   //Pegar envento de click
   document.addEventListener("click", (evento) => {
