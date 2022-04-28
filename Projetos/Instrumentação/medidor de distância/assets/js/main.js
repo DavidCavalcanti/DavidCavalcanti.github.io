@@ -20,5 +20,14 @@ function relogio() {
   //Pegar envento de click
   document.addEventListener("click", (evento) => {
     const elemento = evento.target; // Target informa em qual elemento estamos clicando
+
+    if (elemento.classList.contains("zerar")) {
+      clearInterval(timer); //limpa o timer configurado pela função setInterval(). Ele desativa a função e não executa a função definida pelo temporizador
+      relogio.classList.remove("pausado");
+      relogio.innerHTML = "00:00:00";
+      seconds = 0;
+    }
+
+  
   });
 }
