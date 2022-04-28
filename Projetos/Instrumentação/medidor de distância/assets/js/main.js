@@ -22,21 +22,23 @@ function relogio() {
     const elemento = evento.target; // Target informa em qual elemento estamos clicando
 
     if (elemento.classList.contains("zerar")) {
-      clearInterval(timer); //limpa o timer configurado pela função setInterval(). Ele desativa a função e não executa a função definida pelo temporizador
+      clearInterval(timer); // Ele desativa a função setInterval() e não executa a função definida pelo temporizador
       relogio.classList.remove("pausado");
       relogio.innerHTML = "00:00:00";
       seconds = 0;
     }
 
     if (elemento.classList.contains("pausar")) {
-      clearInterval();
+      clearInterval(timer);
       relogio.classList.add("pausado");
     }
 
-    if(elemento.classList.contains("iniciar")){
-        relogio.classList.remove("pausado");
-        clearInterval(timer);
-        IniciarRelogio();
+    if (elemento.classList.contains("iniciar")) {
+      relogio.classList.remove("pausado");
+      clearInterval(timer);
+      IniciarRelogio();
     }
   });
 }
+
+relogio();
