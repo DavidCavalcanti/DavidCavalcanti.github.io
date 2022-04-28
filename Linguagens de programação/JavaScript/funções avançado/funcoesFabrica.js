@@ -29,5 +29,5 @@ function criaPessoa(nome, sobrenome, altura, peso) {
 
 const pessoa1 = criaPessoa("David", "Cavalcanti", 1.78, 74);
 
-pessoa1.nomeCompleto = "Luana Larissa Teixeira Torees";
+pessoa1.nomeCompleto = "Luana Larissa Teixeira Torres";
 console.log(pessoa1.nomeCompleto);
