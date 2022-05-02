@@ -19,24 +19,33 @@ function criarCalculadora() {
 
     inicia() {
       this.cliqueBotoes();
+      this.pressionarEnter();
+    },
+
+    pressionarEnter() {
+      this.display.addEventListener("keyup", (e) => {
+        if (e.keyCode === 13) {
+          this.realizaConta();
+        }
+      });
     },
 
     realizaConta() {
-        let conta = this.display.value;
+      let conta = this.display.value;
 
-        try{
-            conta = eval(conta);
+      try {
+        conta = eval(conta);
 
-            if(!conta) {
-                alert('conta inválida');
-                return;
-            }
-
-            this.display.value = String(conta);
-        }catch(evento){
-            alert('Conta inválida');
-            return;
+        if (!conta) {
+          alert("conta inválida");
+          return;
         }
+
+        this.display.value = String(conta);
+      } catch (evento) {
+        alert("Conta inválida");
+        return;
+      }
     },
 
     cliqueBotoes() {
