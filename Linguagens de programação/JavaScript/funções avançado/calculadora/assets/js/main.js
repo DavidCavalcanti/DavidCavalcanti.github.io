@@ -10,7 +10,21 @@ function criarCalculadora() {
     display: document.querySelector(".display"),
 
     inicia() {
-      alert("olá, iniciei :-)");
+      this.cliqueBotoes();
+    },
+
+    cliqueBotoes() {
+      document.addEventListener("click", (evento) => {
+        const elemento = evento.target;
+
+        if (elemento.classList.contains("btn-num")) {
+          this.btnParaDisplay(elemento.innerText); // innerText pega o valor texto do button
+        }
+      });
+    },
+
+    btnParaDisplay(valor) {
+      this.display.value += valor;
     },
   };
 }
