@@ -7,34 +7,56 @@
 
 function criarCalculadora() {
   return {
-    display: document.querySelector(".display"),    
+    display: document.querySelector(".display"),
 
-    clearDisplay(){
-        this.display.value = '';
+    clearDisplay() {
+      this.display.value = "";
     },
 
-    apagaUm(){
-        this.display.value = this.display.value.slice(0, -1); // slice: (tamanho da string, menos um) 
+    apagaUm() {
+      this.display.value = this.display.value.slice(0, -1); // slice: (tamanho da string, menos um)
     },
 
     inicia() {
       this.cliqueBotoes();
     },
 
+    realizaConta() {
+        let conta = this.display.value;
+
+        try{
+            conta = eval(conta);
+
+            if(!conta) {
+                alert('conta inválida');
+                return;
+            }
+
+            this.display.value = String(conta);
+        }catch(evento){
+            alert('Conta inválida');
+            return;
+        }
+    },
+
     cliqueBotoes() {
-      document.addEventListener("click", evento => {
+      document.addEventListener("click", (evento) => {
         const elemento = evento.target;
 
         if (elemento.classList.contains("btn-num")) {
-          this.btnParaDisplay(elemento.innerText); // innerText pega o valor texto do button          
+          this.btnParaDisplay(elemento.innerText); // innerText pega o valor texto do button
         }
 
-        if(elemento.classList.contains("btn-clear")){
-            this.clearDisplay();
+        if (elemento.classList.contains("btn-clear")) {
+          this.clearDisplay();
         }
 
-        if(elemento.classList.contains("btn-del")){
-            this.apagaUm();
+        if (elemento.classList.contains("btn-del")) {
+          this.apagaUm();
+        }
+
+        if (elemento.classList.contains("btn-eq")) {
+          this.realizaConta();
         }
       });
     },
