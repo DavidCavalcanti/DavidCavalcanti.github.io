@@ -7,18 +7,26 @@
 
 function criarCalculadora() {
   return {
-    display: document.querySelector(".display"),
+    display: document.querySelector(".display"),    
+
+    clearDisplay(){
+        this.display.value = '';
+    },
 
     inicia() {
       this.cliqueBotoes();
     },
 
     cliqueBotoes() {
-      document.addEventListener("click", (evento) => {
+      document.addEventListener("click", evento => {
         const elemento = evento.target;
 
         if (elemento.classList.contains("btn-num")) {
-          this.btnParaDisplay(elemento.innerText); // innerText pega o valor texto do button
+          this.btnParaDisplay(elemento.innerText); // innerText pega o valor texto do button          
+        }
+
+        if(elemento.classList.contains("btn-clear")){
+            this.clearDisplay();
         }
       });
     },
