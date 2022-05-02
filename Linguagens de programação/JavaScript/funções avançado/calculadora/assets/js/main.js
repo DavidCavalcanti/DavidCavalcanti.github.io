@@ -13,6 +13,10 @@ function criarCalculadora() {
         this.display.value = '';
     },
 
+    apagaUm(){
+        this.display.value = this.display.value.slice(0, -1); // slice: (tamanho da string, menos um) 
+    },
+
     inicia() {
       this.cliqueBotoes();
     },
@@ -27,6 +31,10 @@ function criarCalculadora() {
 
         if(elemento.classList.contains("btn-clear")){
             this.clearDisplay();
+        }
+
+        if(elemento.classList.contains("btn-del")){
+            this.apagaUm();
         }
       });
     },
