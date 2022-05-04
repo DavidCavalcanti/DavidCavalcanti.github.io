@@ -10,9 +10,13 @@ function tempoAleatorio(min, max) {
 function espereai(msg, tempo) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if(typeof msg !== 'string') return reject('BAD VALUE');
+      if (typeof msg !== "string") {
+        return reject("BAD VALUE");
+        return;
+      }
 
-      resolve(msg); // resolve() é de parâmetro único
+      resolve(msg);
+      return;  // resolve() é de parâmetro único
     }, tempo);
   });
 }
@@ -24,7 +28,7 @@ espereai("Conexão com o Banco de Dados", tempoAleatorio(1, 3))
   })
   .then((resposta2) => {
     console.log(resposta2);
-    return espereai('Tratando os dados da BASE', tempoAleatorio(1, 3));
+    return espereai("Tratando os dados da BASE", tempoAleatorio(1, 3));
   })
   .then((resposta3) => {
     console.log(resposta3);
@@ -32,6 +36,6 @@ espereai("Conexão com o Banco de Dados", tempoAleatorio(1, 3))
   .then(() => {
     console.log("Exibe dados na tela.");
   })
-  .catch(erro => {
-    console.log('ERROR ' + erro);
+  .catch((erro) => {
+    console.log("ERROR " + erro);
   });
