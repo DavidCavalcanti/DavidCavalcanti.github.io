@@ -1,28 +1,26 @@
 const express = require("express");
 const app = express();
 
-//        Criar  ler   atualizar  apagar
-//CRUD -> CRATE, READ, UPDATE,    DELETE
-//        POST   GET   PUT        DELETE
-
-// http://meusite.com/ <- GET -> Entregue a página(rota) /
-// http://meusite.com/sobre <- GET -> Entregue a página(rota) /sobre
-// http://meusite.com/contato <- GET -> Entregue a página(rota) /contato
+app.use(express.urlencoded({extended:true}));
 
 app.get("/", (requisicao, resposta) => {
   resposta.send(`
   <form action='/' method= "POST">
-  Nome do cliente: <input type="text" name="nome">
-  <button> Enviar Agora</button>
+  Nome: <input type="text" name="nome">  
+  <button>Enviar</button>
   `);
 });
 
-app.post("/", (req, res) => {
-  res.send("Formulário recebido!");
+// idUsuarios quando possui '?' diz que o parâmetro será opcional
+app.get("/testes/:idUsuarios?/:parametroOpcional?", (req, res) => {
+  console.log(req.params); // Partes  que vem na rota da url
+  console.log(req.query); // Pega o que foi madado pela query String
+  res.send(req.params);
 });
 
-app.get("/contato", (requisicao, resposta) => {
-  resposta.send("Obrigado por entrar em contato com a gente!");
+app.post("/", (req, res) => {  
+  res.send(`O que você enviou pelo formulário foi: ${req.body.nome}`); 
+  console.log(req.body);
 });
 
 // Mando o express escutar qualquer coisa que chegar na porta 3000
