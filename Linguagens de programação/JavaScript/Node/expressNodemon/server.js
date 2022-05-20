@@ -1,3 +1,7 @@
+// urlencoded() é um método embutido no express para 
+// reconhecer o objeto de solicitação de entrada como
+// strings ou arrays 
+
 const express = require("express");
 const app = express();
 
