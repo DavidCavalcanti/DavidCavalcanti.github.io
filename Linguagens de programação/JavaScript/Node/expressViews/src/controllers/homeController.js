@@ -1,11 +1,12 @@
 exports.paginaInicial = (req, res) => {
-  res.send(`
+  res.render("index");
+  /*send(`
     <form action="/" method="POST">
     Nome: <input type="text" name="nome">
     Idade: <input type="text" name="idade">    
     <button>Enviar</button>
     </form>
-    `);
+    `); */
 };
 
 exports.tratarFormulario = (req, res) => {
