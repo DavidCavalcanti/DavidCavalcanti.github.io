@@ -1,2 +1,5 @@
-//alert("Hello word");
-console.log("verificando o bundle.js.maps");
+import Pessoa, { nome, sobrenome, idade } from "./modulo1";
+
+const p1 = new Pessoa(nome, sobrenome, idade);
+
+console.log(p1);
