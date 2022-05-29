@@ -8,3 +8,8 @@ typedef struct no {
     struct no *esquerda, *direita;
 }No;
 
+// Criando árvore
+
+typedef struct {
+    No *raiz; // Primeiro nó da árvore
+}ArvoreB;
