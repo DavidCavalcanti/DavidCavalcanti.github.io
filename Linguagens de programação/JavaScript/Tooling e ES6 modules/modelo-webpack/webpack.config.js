@@ -19,6 +19,10 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
     ],
   },
   devtool: "source-map", //mapeia o erro o no arquivo original
