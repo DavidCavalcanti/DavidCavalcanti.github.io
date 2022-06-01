@@ -9,5 +9,5 @@ exports.paginaContato = (req, res) => {
 };
 
 exports.trataForm = (req, res) => {
-    res.send("Seu dados foram recebidos. Obrigado por entrar em contato Conosco!");
+    res.send(`Olá, ${req.body.cliente}! Seus dados foram recebidos. Obrigado por entrar em contato Conosco!`);
 };
