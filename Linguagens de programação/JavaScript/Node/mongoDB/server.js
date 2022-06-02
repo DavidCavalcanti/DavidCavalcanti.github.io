@@ -7,7 +7,9 @@ const connectionString =
 mongoose.connect(connectionString, {
   useNewUrlParser: true,
   useUniFiedTopology: true,
-}).then(() => console.log('Agora que a conexão ocorreu'));
+}).then(() => {
+  app.emit('Pronto');
+});
 
 const routes = require("./routes");
 const path = require("path");
