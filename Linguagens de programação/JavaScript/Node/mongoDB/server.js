@@ -1,5 +1,14 @@
 const express = require("express");
 const app = express();
+
+const mongoose = require("mongoose");
+const connectionString =
+"mongodb+srv://davidcavalcanti:teste123@cluster0.c9srumn.mongodb.net/?retryWrites=true&w=majority";
+mongoose.connect(connectionString, {
+  useNewUrlParser: true,
+  useUniFiedTopology: true,
+});
+
 const routes = require("./routes");
 const path = require("path");
 const port = 3000;
