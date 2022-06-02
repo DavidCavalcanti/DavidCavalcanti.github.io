@@ -1,8 +1,8 @@
 const HomeModel = require("../models/homeModel");
 
 HomeModel.create({
-  titulo: "Um título de testes",
-  descricao: "Uma descrição de testes.",
+  titulo: "Outra coisa qualquer",
+  descricao: "Outra descrição.",
 })
   .then((dados) => console.log(dados))
   .catch((erro) => console.log(erro));
