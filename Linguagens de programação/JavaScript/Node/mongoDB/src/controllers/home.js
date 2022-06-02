@@ -1,6 +1,9 @@
 const HomeModel = require("../models/homeModel");
 
-HomeModel.find({})
+HomeModel.find({
+  titulo: "Outra coisa qualquer",
+  descricao: "Outra descrição.",
+})
   .then((dados) => console.log(dados))
   .catch((erro) => console.log(erro));
 
