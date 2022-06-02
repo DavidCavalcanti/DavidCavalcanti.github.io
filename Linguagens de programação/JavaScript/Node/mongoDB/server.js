@@ -1,16 +1,16 @@
+require("dotenv").config();
+
 const express = require("express");
 const app = express();
 
 const mongoose = require("mongoose");
-const connectionString =
-  "mongodb+srv://davidcavalcanti:teste123@cluster0.c9srumn.mongodb.net/?retryWrites=true&w=majority";
+
 mongoose
-  .connect(connectionString, {
+  .connect(process.env.CONNECTIONSTRING, {
     useNewUrlParser: true,
     useUniFiedTopology: true,
   })
   .then(() => {
-    console.log("Sucesso ao conectar à base de dados.");
     app.emit("Pronto");
   })
   .catch((erro) => console.log(erro));
