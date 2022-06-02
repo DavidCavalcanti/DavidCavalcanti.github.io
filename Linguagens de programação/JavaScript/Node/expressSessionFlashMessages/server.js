@@ -16,6 +16,8 @@ mongoose
   .catch((erro) => console.log(erro));
 
 const session = require("express-session");
+const MongoStore = require("connect-mongo")(session);
+const flash = require("connect-flash");
 
 const routes = require("./routes");
 const path = require("path");
