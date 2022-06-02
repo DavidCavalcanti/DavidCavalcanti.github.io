@@ -15,6 +15,8 @@ mongoose
   })
   .catch((erro) => console.log(erro));
 
+const session = require("express-session");
+
 const routes = require("./routes");
 const path = require("path");
 const port = 3000;
