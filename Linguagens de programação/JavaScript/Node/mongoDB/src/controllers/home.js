@@ -1,9 +1,6 @@
 const HomeModel = require("../models/homeModel");
 
-HomeModel.create({
-  titulo: "Outra coisa qualquer",
-  descricao: "Outra descrição.",
-})
+HomeModel.find({})
   .then((dados) => console.log(dados))
   .catch((erro) => console.log(erro));
 
