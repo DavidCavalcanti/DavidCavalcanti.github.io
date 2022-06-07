@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.resolve(__dirname, "public")));
 
-const sesionOptions = session({
+const sessionOptions = session({
   secret: "sdfghjlç+654789 qwer qwef asdfd1()",
   store: MongoStore.create({ mongoUrl: process.env.CONNECTIONSTRING }), //process.env.CONNECTIONSTRING URL de conexão do MongoDB
   resave: false,
@@ -38,6 +38,9 @@ const sesionOptions = session({
     httpOnly: true,
   },
 });
+
+app.use(sessionOptions);
+app.use(flash);
 
 app.set("views", path.resolve(__dirname, "src", "views"));
 app.set("view engine", "ejs");
