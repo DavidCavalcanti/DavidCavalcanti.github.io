@@ -8,7 +8,9 @@ HomeModel.find({
   .catch((erro) => console.log(erro));
 
 exports.paginaHome = (req, res) => {
-  console.log(req.session.usuario );
+  req.flash("home", "Hello world!");
+  req.flash("info", "Página em manutenção");
+  req.flash("sucess", "Usuário logado");
   res.render("home.ejs");
   /*res.send(`
        <h1 style="text-align: center"> Hy, I'm David Cavalcanti 
