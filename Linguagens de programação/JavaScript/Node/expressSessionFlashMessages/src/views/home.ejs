@@ -18,7 +18,11 @@
     <section class="container">
       <h1>
         
-        <%= titulo %>
+        <% if(typeof titulo !== "underfined") {%>
+           <%= titulo %>
+        <% } else {%>
+            O título não foi enviado.
+        <%}%>  
       
       </h1>
 
