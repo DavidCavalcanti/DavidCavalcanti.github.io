@@ -19,7 +19,11 @@ const path = require("path");
 const helmet = require("helmet");
 const csrf = require("csurf");
 const port = 3000;
-const { middlewareGlobal, checkCsfrError } = require("./src/middlewares/middleware");
+const {
+  middlewareGlobal,
+  checkCsfrError,
+  csrfMiddleware,
+} = require("./src/middlewares/middleware");
 
 app.use(helmet());
 app.use(express.urlencoded({ extended: true }));
@@ -45,6 +49,7 @@ app.set("view engine", "ejs");
 app.use(csrf());
 app.use(middlewareGlobal);
 app.use(checkCsfrError);
+app.use(csrfMiddleware);
 app.use(routes);
 
 app.on("Pronto", () => {
