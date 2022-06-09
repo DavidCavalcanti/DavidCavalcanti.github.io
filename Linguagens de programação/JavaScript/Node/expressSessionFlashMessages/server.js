@@ -1,10 +1,7 @@
 require("dotenv").config();
-
 const express = require("express");
 const app = express();
-
 const mongoose = require("mongoose");
-
 mongoose
   .connect(process.env.CONNECTIONSTRING, {
     useNewUrlParser: true,
@@ -14,18 +11,15 @@ mongoose
     app.emit("Pronto");
   })
   .catch((erro) => console.log(erro));
-
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const flash = require("connect-flash");
-
 const routes = require("./routes");
 const path = require("path");
 const port = 3000;
 const { middlewareGlobal } = require("./src/middlewares/middleware");
 
 app.use(express.urlencoded({ extended: true }));
-
 app.use(express.static(path.resolve(__dirname, "public")));
 
 const sessionOptions = session({
