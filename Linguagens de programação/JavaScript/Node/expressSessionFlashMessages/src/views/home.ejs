@@ -1,13 +1,14 @@
 <%- include('includes/head');%>
 
-    <section class="container">
-      <h1>Lorem Ipsum</h1>
+<section class="container">
+  <h1>Lorem Ipsum</h1>
 
-      <form action="/" method="post">
-        <label>Cliente</label> <input type="text" name="cliente" />
-        <button type="submit">Enviar</button>
-      </form>
-      <!--
+  <form action="/" method="post">
+    <input type="hidden" name="_csrf" value="<%= csrfToken%>" />
+    <label>Cliente</label> <input type="text" name="cliente" />
+    <button type="submit">Enviar</button>
+  </form>
+  <!--
         <form action="">
             <label for="input-teste-1"> Label teste #1 </label>
             <input type="text" id="input-teste-1"> 
@@ -24,5 +25,5 @@
             <button>Enviar</button>
         </form>
         -->
-    </section>
+</section>
 <%- include('includes/footer'); %>

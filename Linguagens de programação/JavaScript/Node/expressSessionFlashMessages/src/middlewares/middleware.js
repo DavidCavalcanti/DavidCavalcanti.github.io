@@ -15,6 +15,6 @@ exports.checkCsfrError = (err, req, res, next) => {
 };
 
 exports.csrfMiddleware = (req, res, next) => {
-  res.locals.csrfToken = req.crsfToken(); // Cria token
+  res.locals.csrfToken = req.csrfToken(); // Cria token
   next();
 };
