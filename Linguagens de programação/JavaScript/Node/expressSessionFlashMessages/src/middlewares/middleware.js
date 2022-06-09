@@ -6,3 +6,10 @@ exports.middlewareGlobal = (req, res, next) => {
 exports.outroMiddleware = (req, res, next) => {
   next();
 };
+
+exports.checkCsfrError = (err, req, res, next) => {
+  // CÓDIGO DO ERRO
+  if (err && err.code === "EBADCSRFTOKEN") {
+    return res.render("404");
+  }
+};
