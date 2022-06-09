@@ -13,3 +13,8 @@ exports.checkCsfrError = (err, req, res, next) => {
     return res.render("404");
   }
 };
+
+exports.csrfMiddleware = (req, res, next) => {
+  res.locals.csrfToken = req.crsfToken(); // Cria token
+  next();
+};
