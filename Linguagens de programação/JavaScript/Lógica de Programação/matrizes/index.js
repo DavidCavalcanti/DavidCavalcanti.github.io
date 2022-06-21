@@ -4,4 +4,15 @@ var matriz = [
   [17, 06],
 ];
 
-console.table(matriz);
+var valores = ""; // Vai receber os elementos da matriz
+
+// Este primeiro for varre as linhas da matriz
+for (var L = 0; L <= 2; L++) {
+  // Este segundo for varre as coluns da matriz
+  for (var C = 0; C <= 1; C++) {
+    if (C < 1) valores += matriz[L][C] + " \t";
+    else valores += matriz[L][C] + "\n";
+  }
+}
+
+alert(valores);
