@@ -10,3 +10,9 @@ for (var i = 0; i < linhas; i++) {
     matriz[i][j] = "";
   }
 }
+
+for (var L = 0; L < linhas; L++) {
+  for (var C = 0; C < colunas; C++) {
+    matriz[L][C] = prompt("Digite um valor para inserir na matriz:");
+  }
+}
